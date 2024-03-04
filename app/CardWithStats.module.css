@@ -1,0 +1,47 @@
+.cardContainer {
+  padding: 20px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(355px, 1fr)); 
+ gap: 16px;
+}
+
+.customCardSize {
+  padding: 8px;
+  width: 100%; 
+  /* max-width: 22.813rem; 
+  height: 346px;  */
+}
+
+.largerAvatar {
+  width:7.5rem; 
+  height: 7.5rem; 
+}
+
+.card {
+  background-color: var(--mantine-color-body);
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+}
+
+.cardContainer > .card > div {
+  margin-top: var(--mantine-spacing-sm);
+}
+
+
+@media (min-width: 75rem) {
+  .cardContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 59rem) and (min-width: 48rem) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+}
